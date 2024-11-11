@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/38701__elanhickler__archi-sonar-02.wav-cfe62c30e59b40369dae669a897bfa12.sample"
+
+[deps]
+
+source_file="res://MusicAndSounds/38701__elanhickler__archi-sonar-02.wav"
+dest_files=[ "res://.import/38701__elanhickler__archi-sonar-02.wav-cfe62c30e59b40369dae669a897bfa12.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

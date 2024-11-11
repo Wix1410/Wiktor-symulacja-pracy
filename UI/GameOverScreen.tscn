@@ -1,0 +1,219 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://UI/font2.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://UI/GameOverScreen.gd" type="Script" id=2]
+[ext_resource path="res://MusicAndSounds/168863__ekvelika__piano-c-minor-major-haunting-chord.wav" type="AudioStream" id=3]
+[ext_resource path="res://MusicAndSounds/monster_bite_lucaduff.ogg" type="AudioStream" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.372549, 0.12549, 0.12549, 0.466667 )
+border_color = Color( 0.270588, 0.168627, 0.168627, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 3.0
+content_margin_bottom = 8.0
+bg_color = Color( 0.756863, 0.27451, 0.27451, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.0627451, 0.0627451, 0.0627451, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_top = 2.0
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id=9]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 5.0
+content_margin_bottom = 6.0
+bg_color = Color( 0.101961, 0.054902, 0.054902, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.0627451, 0.0627451, 0.0627451, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_bottom = 2.0
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id=8]
+content_margin_left = 10.0
+content_margin_right = 10.0
+content_margin_top = 5.0
+content_margin_bottom = 8.0
+bg_color = Color( 0.290196, 0.0941176, 0.0941176, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.0627451, 0.0627451, 0.0627451, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_size = 6
+
+[sub_resource type="Animation" id=10]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel/MarginContainer/Rows:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 40, 400 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "default"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel/MarginContainer/Rows:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 40, 400 ), Vector2( 40, 40 ) ]
+}
+tracks/1/type = "audio"
+tracks/1/path = NodePath("Audio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 4 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 3 )
+} ],
+"times": PoolRealArray( 0, 1 )
+}
+
+[node name="GameOverScreen" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 40
+custom_constants/margin_top = 40
+custom_constants/margin_left = 40
+custom_constants/margin_bottom = 40
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rows" type="VBoxContainer" parent="Panel/MarginContainer"]
+margin_left = 40.0
+margin_top = 400.0
+margin_right = 600.0
+margin_bottom = 680.0
+custom_constants/separation = 60
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/Rows"]
+margin_right = 560.0
+margin_bottom = 57.0
+custom_fonts/font = SubResource( 2 )
+text = "YOU DIED"
+align = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel/MarginContainer/Rows"]
+margin_top = 117.0
+margin_right = 560.0
+margin_bottom = 231.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rows2" type="VBoxContainer" parent="Panel/MarginContainer/Rows/CenterContainer"]
+margin_left = 203.0
+margin_right = 356.0
+margin_bottom = 114.0
+custom_constants/separation = 30
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart" type="Button" parent="Panel/MarginContainer/Rows/CenterContainer/Rows2"]
+margin_right = 153.0
+margin_bottom = 42.0
+custom_constants/hseparation = 0
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/normal = SubResource( 8 )
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="Panel/MarginContainer/Rows/CenterContainer/Rows2"]
+margin_top = 72.0
+margin_right = 153.0
+margin_bottom = 114.0
+custom_constants/hseparation = 0
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/normal = SubResource( 8 )
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "default"
+anims/RESET = SubResource( 10 )
+anims/default = SubResource( 11 )
+
+[connection signal="pressed" from="Panel/MarginContainer/Rows/CenterContainer/Rows2/Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/Rows/CenterContainer/Rows2/Quit" to="." method="_on_Quit_pressed"]

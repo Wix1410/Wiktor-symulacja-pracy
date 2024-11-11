@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/351369__wilhellboy__lightbulletping.ogg-713641a4b61d5e234487776643122f05.oggstr"
+
+[deps]
+
+source_file="res://MusicAndSounds/351369__wilhellboy__lightbulletping.ogg"
+dest_files=[ "res://.import/351369__wilhellboy__lightbulletping.ogg-713641a4b61d5e234487776643122f05.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

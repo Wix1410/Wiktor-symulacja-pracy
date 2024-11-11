@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://UI/HealthUI.gd" type="Script" id=1]
+[ext_resource path="res://UI/HealthBarForeground.png" type="Texture" id=2]
+[ext_resource path="res://UI/HealthBarValue.png" type="Texture" id=3]
+[ext_resource path="res://UI/HealthBarBackground.png" type="Texture" id=4]
+[ext_resource path="res://UI/font3.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/light.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 5 )
+
+[node name="HealthUI" type="Control"]
+margin_right = 101.0
+margin_bottom = 44.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthUIBackground" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthUIValue" type="TextureRect" parent="."]
+margin_right = 100.0
+margin_bottom = 50.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthUIForeground" type="TextureRect" parent="."]
+margin_right = 100.0
+margin_bottom = 50.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 42.0
+margin_top = 9.0
+margin_right = 85.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 1 )
+text = "5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 52, 21 )
+scale = Vector2( 1.10547, 0.489258 )
+texture = ExtResource( 6 )
+texture_scale = 0.1
+color = Color( 1, 0, 0, 1 )
+energy = 0.8
+shadow_enabled = true
+shadow_gradient_length = 2.0
+shadow_filter_smooth = 50.0

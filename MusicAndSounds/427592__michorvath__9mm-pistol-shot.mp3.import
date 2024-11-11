@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/427592__michorvath__9mm-pistol-shot.mp3-d1e9452c3e3756269d8167b523528ca2.mp3str"
+
+[deps]
+
+source_file="res://MusicAndSounds/427592__michorvath__9mm-pistol-shot.mp3"
+dest_files=[ "res://.import/427592__michorvath__9mm-pistol-shot.mp3-d1e9452c3e3756269d8167b523528ca2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

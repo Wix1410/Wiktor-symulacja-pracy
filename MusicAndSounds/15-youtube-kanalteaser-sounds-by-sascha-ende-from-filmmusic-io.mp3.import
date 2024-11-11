@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/15-youtube-kanalteaser-sounds-by-sascha-ende-from-filmmusic-io.mp3-67f5a1dd2613da9743c8384c4f021dcf.mp3str"
+
+[deps]
+
+source_file="res://MusicAndSounds/15-youtube-kanalteaser-sounds-by-sascha-ende-from-filmmusic-io.mp3"
+dest_files=[ "res://.import/15-youtube-kanalteaser-sounds-by-sascha-ende-from-filmmusic-io.mp3-67f5a1dd2613da9743c8384c4f021dcf.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

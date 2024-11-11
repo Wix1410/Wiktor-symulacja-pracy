@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/388635__totalcult__box-12.wav-6c75e7c8bb8a5708476ffbe0db6f6844.sample"
+
+[deps]
+
+source_file="res://MusicAndSounds/388635__totalcult__box-12.wav"
+dest_files=[ "res://.import/388635__totalcult__box-12.wav-6c75e7c8bb8a5708476ffbe0db6f6844.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

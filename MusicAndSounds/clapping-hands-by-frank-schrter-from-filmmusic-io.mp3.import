@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/clapping-hands-by-frank-schrter-from-filmmusic-io.mp3-a0ad8bf9c1b2e29b071fe041997d42f1.mp3str"
+
+[deps]
+
+source_file="res://MusicAndSounds/clapping-hands-by-frank-schrter-from-filmmusic-io.mp3"
+dest_files=[ "res://.import/clapping-hands-by-frank-schrter-from-filmmusic-io.mp3-a0ad8bf9c1b2e29b071fe041997d42f1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

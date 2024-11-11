@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/monster_bite_lucaduff.ogg-a3b68b399455a90178555e7b7e917078.oggstr"
+
+[deps]
+
+source_file="res://MusicAndSounds/monster_bite_lucaduff.ogg"
+dest_files=[ "res://.import/monster_bite_lucaduff.ogg-a3b68b399455a90178555e7b7e917078.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

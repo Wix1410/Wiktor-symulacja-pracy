@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/427598__michorvath__ar15-pistol-shot.mp3-adffbb22f210b332e68c3b8eff03745c.mp3str"
+
+[deps]
+
+source_file="res://MusicAndSounds/427598__michorvath__ar15-pistol-shot.mp3"
+dest_files=[ "res://.import/427598__michorvath__ar15-pistol-shot.mp3-adffbb22f210b332e68c3b8eff03745c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

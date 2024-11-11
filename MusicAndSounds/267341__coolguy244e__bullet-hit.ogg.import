@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/267341__coolguy244e__bullet-hit.ogg-7c8a33c089e17e0312c95bee590e2c4b.oggstr"
+
+[deps]
+
+source_file="res://MusicAndSounds/267341__coolguy244e__bullet-hit.ogg"
+dest_files=[ "res://.import/267341__coolguy244e__bullet-hit.ogg-7c8a33c089e17e0312c95bee590e2c4b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

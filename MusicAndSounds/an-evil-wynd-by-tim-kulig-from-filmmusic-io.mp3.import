@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/an-evil-wynd-by-tim-kulig-from-filmmusic-io.mp3-86dd48defa3e61f7dd4474525fdc37e7.mp3str"
+
+[deps]
+
+source_file="res://MusicAndSounds/an-evil-wynd-by-tim-kulig-from-filmmusic-io.mp3"
+dest_files=[ "res://.import/an-evil-wynd-by-tim-kulig-from-filmmusic-io.mp3-86dd48defa3e61f7dd4474525fdc37e7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

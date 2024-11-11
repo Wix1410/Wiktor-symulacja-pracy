@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/405538__nebulasnails__pistol-cock.ogg-ca95510b0cb394e3c2c28c5ba2e58f70.oggstr"
+
+[deps]
+
+source_file="res://MusicAndSounds/405538__nebulasnails__pistol-cock.ogg"
+dest_files=[ "res://.import/405538__nebulasnails__pistol-cock.ogg-ca95510b0cb394e3c2c28c5ba2e58f70.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

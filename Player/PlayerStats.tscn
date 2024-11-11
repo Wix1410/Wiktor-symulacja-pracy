@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://elements/Stats.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/PlayerStats.gd" type="Script" id=2]
+[ext_resource path="res://MusicAndSounds/38701__elanhickler__archi-sonar-02.wav" type="AudioStream" id=3]
+[ext_resource path="res://MusicAndSounds/528863__eponn__beep-3.wav" type="AudioStream" id=4]
+[ext_resource path="res://MusicAndSounds/531511__eponn__menu-beep.wav" type="AudioStream" id=5]
+
+[node name="PlayerStats" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+max_health = 5
+max_ammo = 27
+start_ammo = 5
+
+[node name="HealthSound" type="AudioStreamPlayer" parent="." index="0"]
+stream = ExtResource( 3 )
+
+[node name="AmmoSound" type="AudioStreamPlayer" parent="." index="1"]
+stream = ExtResource( 4 )
+
+[node name="KeySound" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource( 5 )

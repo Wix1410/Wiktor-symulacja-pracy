@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/467701__lucasduff__monster-bite.wav-ddc27ff06024dc24f2ac1be5b9a22085.sample"
+
+[deps]
+
+source_file="res://MusicAndSounds/467701__lucasduff__monster-bite.wav"
+dest_files=[ "res://.import/467701__lucasduff__monster-bite.wav-ddc27ff06024dc24f2ac1be5b9a22085.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
