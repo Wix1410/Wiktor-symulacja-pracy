@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends RigidBody2D
 
 export var speed = 100
 export var color = Color(255, 255, 255)
@@ -47,7 +47,8 @@ func _physics_process(delta):
 	hurtbox.global_rotation = self.global_rotation
 	match state:
 		STAY:
-			seek_player()
+			if playerDetectionZone.player_in_view():
+				seek_player()
 		CHASE:
 			var player = playerDetectionZone.player
 			if player != null:
@@ -61,7 +62,6 @@ func seek_player():
 func move_enemy():
 	if path.size() > 0:
 		animationPlayer.play("walk")
-		rotation = velocity.angle()
 		eye.look_at(playerPos)
 		move_to_target()
 	else:
@@ -80,7 +80,7 @@ func move_to_target():
 			return
 		var direction = global_position.direction_to(path[0])
 		velocity = direction * speed
-		velocity = move_and_slide(velocity)
+		velocity = set_axis_velocity(velocity)
 		
 func get_target_path(target_pos):
 	playerPos = target_pos
