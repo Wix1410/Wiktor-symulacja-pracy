@@ -270,6 +270,10 @@ radius = 30.0167
 [node name="GhostEnemy" type="RigidBody2D" groups=["enemy"]]
 collision_layer = 16
 collision_mask = 19
+mass = 70.0
+linear_damp = 20.0
+angular_velocity = 100.0
+angular_damp = 20.0
 script = ExtResource( 3 )
 
 [node name="Body" type="Sprite" parent="."]

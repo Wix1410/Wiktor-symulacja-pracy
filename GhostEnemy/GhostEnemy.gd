@@ -61,6 +61,7 @@ func seek_player():
 	
 func move_enemy():
 	if path.size() > 0:
+		rotation = velocity.angle()
 		animationPlayer.play("walk")
 		eye.look_at(playerPos)
 		move_to_target()
@@ -80,7 +81,7 @@ func move_to_target():
 			return
 		var direction = global_position.direction_to(path[0])
 		velocity = direction * speed
-		velocity = set_axis_velocity(velocity)
+		linear_velocity = velocity
 		
 func get_target_path(target_pos):
 	playerPos = target_pos
