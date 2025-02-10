@@ -16,6 +16,9 @@ var knockback = Vector2.ZERO
 var stats = PlayerStats
 var reload = false
 var hitParticle = load("res://Player/PlayerHurtParticle.tscn")
+var canSprint = false
+var maxStamina = 100
+var stamina = maxStamina
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
@@ -26,18 +29,21 @@ onready var hurtbox = $Hurtbox
 onready var timer = $Timer
 onready var audio = $HitSoundPlayer
 onready var light = $Light2D
+onready var sprintBar = $Sprite/SprintBar
 
 func _ready():
+	
 	stats.connect("no_health", self, "queue_free")
 	animationTree.active = true
 	animationState.start("Idle")
-
+	
 func _process(delta):
 	light.global_rotation = 0
 	apply_central_impulse(knockback)
 	knockback = Vector2.ZERO
-	
 	sprite.look_at(get_global_mouse_position())
+	sprintBar.visible = false
+	CanSprint(canSprint)
 	match state:
 		MOVE:
 			move_state(delta)
@@ -58,6 +64,11 @@ func move_state(delta):
 	if input_vector != Vector2.ZERO:
 		animationState.travel("walking")
 		apply_central_impulse(input_vector*90)
+		if Input.is_key_pressed(KEY_SHIFT) and canSprint:
+			animationState.travel("walking")
+			sprintBar.visible = true
+			apply_central_impulse(input_vector*90)
+			stamina =- 1
 	else:
 		animationState.travel("Idle")
 	
@@ -127,4 +138,9 @@ func _on_Hurtbox_area_entered(area):
 	explosion.global_position = self.global_position
 	explosion.global_rotation = global_rotation
 	
-
+func CanSprint(canSprint):
+	if stamina == maxStamina or stamina > 0:
+		canSprint = true
+	else:
+		canSprint = false
+	return canSprint
