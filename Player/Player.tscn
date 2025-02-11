@@ -396,7 +396,6 @@ vframes = 4
 position = Vector2( 23, 0 )
 
 [node name="SprintBar" type="ProgressBar" parent="Sprite"]
-visible = false
 margin_left = -19.0
 margin_top = -15.0
 margin_right = 12.0

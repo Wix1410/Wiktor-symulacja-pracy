@@ -19,6 +19,7 @@ var hitParticle = load("res://Player/PlayerHurtParticle.tscn")
 var maxStamina = 100
 var stamina = maxStamina
 var canSprint
+var sprintMultipler = 1
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
@@ -60,10 +61,10 @@ func move_state(delta):
 	
 	if input_vector != Vector2.ZERO:
 		animationState.travel("walking")
-		apply_central_impulse(input_vector*90)
+		apply_central_impulse(input_vector*90*sprintMultipler)
 		if Input.is_key_pressed(KEY_SHIFT) and CanSprint():
-			apply_central_impulse(input_vector*90)
-			stamina =- sprintBar.step
+			sprintMultipler = 1.5
+			sprintBar.visible = true
 		else:
 			sprintBar.visible = false
 	else:
@@ -136,8 +137,9 @@ func _on_Hurtbox_area_entered(area):
 	explosion.global_rotation = global_rotation
 	
 func CanSprint():
-	if stamina == maxStamina or stamina > 0:
-		canSprint = true
+	if stamina > 0:
+		stamina =- sprintBar.step
+		return true
 	else:
-		canSprint = false
+		return false
 
