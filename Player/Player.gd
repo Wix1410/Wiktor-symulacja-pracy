@@ -42,6 +42,7 @@ func _process(delta):
 	apply_central_impulse(knockback)
 	knockback = Vector2.ZERO
 	sprite.look_at(get_global_mouse_position())
+	sprintBar.value = stamina
 	match state:
 		MOVE:
 			move_state(delta)
@@ -63,10 +64,13 @@ func move_state(delta):
 		animationState.travel("walking")
 		apply_central_impulse(input_vector*90*sprintMultipler)
 		if Input.is_key_pressed(KEY_SHIFT) and CanSprint():
-			sprintMultipler = 1.5
+			sprintMultipler = 2
 			sprintBar.visible = true
+			stamina =- sprintBar.step
 		else:
+			sprintMultipler = 1
 			sprintBar.visible = false
+			stamina =+ sprintBar.step
 	else:
 		animationState.travel("Idle")
 	
@@ -138,7 +142,6 @@ func _on_Hurtbox_area_entered(area):
 	
 func CanSprint():
 	if stamina > 0:
-		stamina =- sprintBar.step
 		return true
 	else:
 		return false
