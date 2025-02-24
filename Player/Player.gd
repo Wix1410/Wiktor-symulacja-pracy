@@ -36,6 +36,7 @@ func _ready():
 	stats.connect("no_health", self, "queue_free")
 	animationTree.active = true
 	animationState.start("Idle")
+	sprintBar.visible = false
 	
 func _process(delta):
 	light.global_rotation = 0
@@ -66,11 +67,11 @@ func move_state(delta):
 		if Input.is_key_pressed(KEY_SHIFT) and CanSprint():
 			sprintMultipler = 2
 			sprintBar.visible = true
-			stamina =- sprintBar.step
-		else:
+			stamina -= 0.5
+		elif not Input.is_key_pressed(KEY_SHIFT):
 			sprintMultipler = 1
 			sprintBar.visible = false
-			stamina =+ sprintBar.step
+			stamina += 0.5
 	else:
 		animationState.travel("Idle")
 	
