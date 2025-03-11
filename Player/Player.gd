@@ -18,7 +18,6 @@ var reload = false
 var hitParticle = load("res://Player/PlayerHurtParticle.tscn")
 var maxStamina = 100
 var stamina = maxStamina
-var canSprint
 var sprintMultipler = 1
 
 onready var animationPlayer = $AnimationPlayer
